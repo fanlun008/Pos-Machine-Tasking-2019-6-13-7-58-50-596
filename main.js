@@ -15,8 +15,6 @@ function generateItems(barCode) {
   return item;
 }
 
-
-
 /*
   items: {'0001':1, '0003':2, '0005':1}
   return:
@@ -74,7 +72,7 @@ function findItemById(id) {
   return item;
 }
 
-function main(barcodeList) {
+function printReceipt(barcodeList) {
   var items = generateItems(barcodeList);
   var resultReceiptContent = getReceiptContentFromItems(items);
   console.log(resultReceiptContent);
@@ -83,4 +81,4 @@ function main(barcodeList) {
 
 // main(['0001','0003', '0005', '0003'])
 
-module.exports = main;
+module.exports = printReceipt;
